@@ -8,6 +8,7 @@
 return array(
 	'name'=>'YoPoint',
     'defaultController'=>'site',
+    'language'=>'en',
 	//'theme'=>'yopoint',
 
 	// preloading 'log' component
@@ -28,9 +29,6 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-        //Back End Module
-        'ypman',
-
 	),
 
 	// application components

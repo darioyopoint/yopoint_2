@@ -56,7 +56,7 @@
               .css('position', 'fixed')
               .css('top', newTop)
             if (typeof s.getWidthFrom !== 'undefined') {
-              s.stickyElement.css('width', $(s.getWidthFrom).width());
+              //s.stickyElement.css('width', $(s.getWidthFrom).width());
             }
 
             s.stickyElement.parent().addClass(s.className);
@@ -81,7 +81,7 @@
           stickyElement.wrapAll(wrapper);
 
           if (o.center) {
-            stickyElement.parent().css({width:stickyElement.outerWidth(),marginLeft:"0",marginRight:"0"});
+            stickyElement.parent().css({/*width:stickyElement.outerWidth(),*/marginLeft:"0",marginRight:"0"});
           }
 
           if (stickyElement.css("float") == "right") {

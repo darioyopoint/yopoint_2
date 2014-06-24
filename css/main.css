@@ -3,12 +3,14 @@ body
 	margin: 0;
 	padding: 0;
 	color: #fff;
-    font-family: roboto;
+    font: roboto;
     background-image: url('../images/theme/bg.jpg') !important;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment:fixed;
+    width: 100%;
+    right:0;
 }
 #page
 {
@@ -16,17 +18,17 @@ body
 	margin-bottom: 5px;
     width:80%;
 }
-
+/*####################################__HEADER_START__###############################*/
 .header
 {
     margin-top: 2px;
 	padding-top: 10px;
     position: absolute;
     display:block;
-    height:200px;
+    height:250px;
     width: 100%;
-    left:0px;
     background-color: rgba(20, 20, 20, 0.8);
+    margin-right: 0px;
 }
 
 .header a:hover{
@@ -44,7 +46,7 @@ body
 .header-social{
     display:block;
     float: left;
-    margin-left: 9%;
+    margin-left: 12.5%;
     width: auto;
     font-size: 12px;
     color: #FFF;
@@ -67,11 +69,15 @@ body
     width: 16px;
     margin: -4px 2px;
 }
+/*####################################__HEADER_END__###############################*/
+.main-content{
+    margin-left:15.5%;
+    text-align: justify;
+    width: 90%;
+}
 
 #content
 {
-    padding: 20px;
-
 }
 
 #sidebar
@@ -85,8 +91,8 @@ body
     position: absolute;
     width:100%;
     left:0px;
-	font-size: 0.8rem;
-    background-color: #636363;
+	font-size: 0.9rem;
+    background-color: rgba(99,99,99,0.9);
     font-weight: 400;
     height: auto;
     color:#fff;
@@ -119,7 +125,7 @@ body
     margin-left: 5%;
     margin-top: 10px;
     margin-bottom: 5px;
-    line-height: 1em;
+    line-height: 1.6rem;
     margin-left:12.5%;
     margin-right: 0%;
 }
@@ -129,8 +135,8 @@ body
     float: left;
     width: 20%;
     margin: 10px 0px;
-    line-height: 1.2em;
-
+    line-height: 1.5rem;
+    padding-left:3%;
 }
 
 .footer-right{
@@ -139,11 +145,11 @@ body
     width: 20%;
     margin-top: 10px;
     margin-bottom: 5px;
-    line-height: 1.2em;
-    margin-right:15%;
+    line-height: 1.3rem;
+    margin-right:12.5%;
 }
 
-.footer p:hover, a:hover{
+.footer a:hover{
     background-color: #c2c2c2;
     text-decoration: none;
     border-radius: 4px;
