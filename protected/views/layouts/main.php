@@ -10,6 +10,7 @@
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
 	<![endif]-->
+    <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/theme/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
@@ -19,7 +20,7 @@
             //Header Fixed Bar
             $('#header').sticky({ topSpacing: 0 });
             //Backgorund Fixed Effect
-            $.backstretch("<?php echo  Yii::app()->baseUrl;?>/images/bg.png");
+            $.backstretch("<?php echo  Yii::app()->baseUrl;?>/images/theme/bg.png");
             //Header Content
             $.ajax({
                     type: 'POST',
@@ -60,7 +61,7 @@
     <!-- END HEADER -->
 
     <!-- START MAIN-CONTENT -->
-    <div class="main-content" id="main-content" style="margin-top:100px;"></div>
+    <div class="main-content" id="main-content""></div>
     <div class="clear"></div>
     <!-- END MAIN-CONTENT -->
 

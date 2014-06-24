@@ -9,8 +9,8 @@ class YPManModule extends CWebModule
 
 		// import the module-level models and components
 		$this->setImport(array(
-			'YPMan.models.*',
-			'YPMan.components.*',
+			'ypman.models.*',
+			'ypman.components.*',
 		));
 	}
 
@@ -18,8 +18,7 @@ class YPManModule extends CWebModule
 	{
 		if(parent::beforeControllerAction($controller, $action))
 		{
-			// this method is called before any module controller action is performed
-			// you may place customized code here
+            Yii::app()->request->redirect(Yii::app()->createUrl('/ypman/default/index'));
 			return true;
 		}
 		else

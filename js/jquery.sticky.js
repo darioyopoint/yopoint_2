@@ -38,7 +38,7 @@
           if (s.currentTop !== null) {
             s.stickyElement
               .css('position', '')
-              .css('top', '');
+              .css('top', '')
             s.stickyElement.parent().removeClass(s.className);
             s.currentTop = null;
           }
@@ -54,8 +54,7 @@
           if (s.currentTop != newTop) {
             s.stickyElement
               .css('position', 'fixed')
-              .css('top', newTop);
-
+              .css('top', newTop)
             if (typeof s.getWidthFrom !== 'undefined') {
               s.stickyElement.css('width', $(s.getWidthFrom).width());
             }
@@ -82,7 +81,7 @@
           stickyElement.wrapAll(wrapper);
 
           if (o.center) {
-            stickyElement.parent().css({width:stickyElement.outerWidth(),marginLeft:"auto",marginRight:"auto"});
+            stickyElement.parent().css({width:stickyElement.outerWidth(),marginLeft:"0",marginRight:"0"});
           }
 
           if (stickyElement.css("float") == "right") {

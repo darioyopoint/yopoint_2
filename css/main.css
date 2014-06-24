@@ -2,47 +2,205 @@ body
 {
 	margin: 0;
 	padding: 0;
-	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: #EFEFEF;
+	color: #fff;
+    font-family: roboto;
+    background-image: url('../images/theme/bg.jpg') !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
 #page
 {
-	margin-top: 5px;
+	margin-top: 0px;
 	margin-bottom: 5px;
-	background: white;
-	border: 1px solid #C9E0ED;
+    width:80%;
 }
 
-#header
+.header
 {
-	margin: 0;
-	padding: 0;
-	border-top: 3px solid #C9E0ED;
-    width:100%;
-    background-color: #fff;
+    margin-top: 2px;
+	padding-top: 10px;
+    position: absolute;
+    display:block;
+    height:200px;
+    width: 100%;
+    left:0px;
+    background-color: rgba(20, 20, 20, 0.8);
+}
+
+.header a:hover{
+    text-decoration: none;
+    background: none;
+}
+
+.header-logo{
+    margin-left: 12.5%;
+    margin-top: 30px;
+    width:150px;
+    height:36px;
+}
+
+.header-social{
+    display:block;
+    float: left;
+    margin-left: 9%;
+    width: auto;
+    font-size: 12px;
+    color: #FFF;
+    vertical-align: baseline;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+}
+
+.header-social ul li{
+    list-style-type: none;
+    display: inline;
+}
+
+.header-social ul li a{
+    text-decoration: none;
+}
+
+.header-social ul li a img{
+    height: 16px;
+    width: 16px;
+    margin: -4px 2px;
 }
 
 #content
 {
     padding: 20px;
+
 }
 
 #sidebar
 {
 	padding: 20px 20px 20px 0;
 }
-
-#footer
+/*####################################__FOOTER_START__###############################*/
+.footer
 {
-	padding: 10px;
-	margin: 10px 20px;
-	font-size: 0.8em;
-	text-align: center;
-	border-top: 1px solid #C9E0ED;
+    display: block;
+    position: absolute;
+    width:100%;
+    left:0px;
+	font-size: 0.8rem;
+    background-color: #636363;
+    font-weight: 400;
+    height: auto;
+    color:#fff;
+    padding-top: 20px;
 }
 
+.footer a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.footer ul{
+    list-style-type: none;
+}
+
+.footer-logo{
+    position: absolute;
+    display: block;
+    margin:0px auto ;
+    width: 48px;
+    height: 48px;
+    left: 47%;
+    top: -25px;
+}
+
+.footer-left{
+    text-align: left;
+    float: left;
+    width: 28%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1em;
+    margin-left:12.5%;
+    margin-right: 0%;
+}
+
+.footer-center{
+    text-align: left;
+    float: left;
+    width: 20%;
+    margin: 10px 0px;
+    line-height: 1.2em;
+
+}
+
+.footer-right{
+    text-align: center;
+    float:right;
+    width: 20%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.2em;
+    margin-right:15%;
+}
+
+.footer p:hover, a:hover{
+    background-color: #c2c2c2;
+    text-decoration: none;
+    border-radius: 4px;
+    color:#3f3e3f;
+}
+
+.footer-copyright{
+    display:block;
+    width: 100%;
+    margin:10px;
+    text-align: center;
+    clear:both;
+    margin: 5px 0;
+}
+
+[class^="yp-icon-"], [class*=" yp-icon-"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin: 2px;
+}
+
+.yp-icon-mail{
+    background-image: url("../images/theme/footer_icons/yp-icon-mail.png");
+}
+
+.yp-icon-tel{
+    background-image: url("../images/theme/footer_icons/yp-icon-tel.png");
+}
+
+.yp-icon-email{
+    background-image: url("../images/theme/footer_icons/yp-icon-email.png");
+}
+
+.yp-icon-click{
+    background-image: url("../images/theme/footer_icons/yp-icon-click.png");
+}
+
+.yp-icon-facebook{
+    background-image: url("../images/theme/footer_icons/yp-icon-facebook.png");
+}
+
+.yp-icon-google{
+    background-image: url("../images/theme/footer_icons/yp-icon-google.png");
+}
+
+.yp-icon-twitter{
+    background-image: url("../images/theme/footer_icons/yp-icon-twitter.png");
+}
+
+.yp-icon-weibo{
+    background-image: url("../images/theme/footer_icons/yp-icon-weibo.png");
+}
+
+
+/*####################################__FOOTER_END__###############################*/
 #logo
 {
 	padding: 10px 20px;
@@ -229,3 +387,4 @@ div.search-form
 {
 	background: #80CFFF;
 }
+

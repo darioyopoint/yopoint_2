@@ -7,6 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'name'=>'YoPoint',
+    'defaultController'=>'site',
 	//'theme'=>'yopoint',
 
 	// preloading 'log' component
@@ -15,7 +16,8 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
-		'application.components.*',
+        'application.modules.*',
+        'application.components.*',
 	),
 
 	'modules'=>array(
@@ -26,6 +28,9 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+        //Back End Module
+        'ypman',
+
 	),
 
 	// application components
@@ -35,18 +40,19 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
-		/*
+
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
+                //'index.php/ypman'=>'ypman',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
+            'caseSensitive' => false,
 		),
-		*/
+
 		'db'=>array(
-		//	'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/trackstar.db',
 		),
 		// uncomment the following to use a MySQL database
 		'db'=>array(

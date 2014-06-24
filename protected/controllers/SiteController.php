@@ -119,47 +119,57 @@ class SiteController extends Controller
     /*###################################################################################*/
     public function actionGetHeader()
     {
-        echo '<div id="logo">'.CHtml::encode(Yii::app()->name).'</div>';
+        $header_html = '<div class="header-social" id="header-social"><ul><span style="float:left; line-height:16px; vertival-align:middle;">Follow us:</span>'
+                                  .'<li><a href="https://www.facebook.com/pages/YoPoint13-%E6%82%A0%E7%82%B9/134777376546022" target="_blank"><img src="'.Yii::app()->baseUrl.'/images/theme/social_icons/facebook.png"  alt="Follow us on Facebook" title="Follow us on Facebook"> </a></li>
+                                    <li><a href="https://plus.google.com/118247963514120148054/posts?hl=en-GB&partnerid=gplp0" target="_blank"><img src="'.Yii::app()->baseUrl.'/images/theme/social_icons/google.png"  alt="Follow us on Google+" title="Follow us on Google+"> </a></li>
+                                    <li><a href="https://twitter.com/YoPoint13" target="_blank"><img src="'.Yii::app()->baseUrl.'/images/theme/social_icons/twitter.png"  alt="Follow us on Twitter" title="Follow us on Twitter"> </a></li>
+                                    <li><a href="#"><img src="'.Yii::app()->baseUrl.'/images/theme/social_icons/weibo.png"  alt="Follow us on Weibo" title="Follow us on Weibo"> </a></li>
+                                </ul>
+                        </div>';
+        $header_html.='<div class="header-logo" id="header-logo"><a href='.Yii::app()->baseUrl."><img src=".Yii::app()->baseUrl.'/images/theme/logo_main.png alt="Yopoint Logo" title="YoPoint Home"></a></div>';
+        echo $header_html;
     }
 
     public function actionGetContent()
     {
-        $this->renderPartial("index",'',false);
+        //echo Yii::app()->getModule('ypman');
+        $this->renderPartial("index");
+        //echo CHtml::link('YPMan',array('/index/ypman'), array('target'=>'_blank'));
     }
 
     public function actionGetFooter()
     {
         $footer_html = '
-                      <h4>YOPOINT <span>LTD</span></h4>
-                            <div class="row">
-                                <div class="">
-                                    <ul class="foot_info">
+                        <a href="'.Yii::app()->baseUrl.'">
+                            <img class="footer-logo" src="'.Yii::app()->baseUrl.'/images/theme/footer_logo.png" alt="Yopoint">
+                        </a>
+                                <div class="footer-left" id="footer-left">
+                                    <ul>
                                         <li><p><i class="yp-icon-mail"></i> 37/16A One Canada Square Canary Wharf, London E14 5AA</p></li>
                                         <li><p><i class="yp-icon-tel"></i> +44[0]207712 1568</p></li>
                                         <li><p><i class="yp-icon-email"></i> info@yopoint.com</p></li>
                                         <li><p><i class="yp-icon-click"></i><a href="http://www.yopoint.com">www.yopoint.com</a></p></li>
                                     </ul>
                                 </div>
-                                <div class="col-lg-4">
-                                    <ul class="foot_socal" style="padding-left:60px;">
-                                        <li><a href="https://www.facebook.com/pages/YoPoint-%E6%82%A0%E7%82%B9/134777376546022"><i class="yp-icon-facebook"></i> Find us on Facebook&nbsp&nbsp</a></li>
-                                        <li><a href="https://plus.google.com/118247963514120148054/posts?hl=en-GB&partnerid=gplp0"><i class="yp-icon-google"></i> Plus Yopoint&nbsp&nbsp</a></li>
-                                        <li><a href="https://twitter.com/YoPoint13"><i class="yp-icon-twitter"></i> Find us on Twitter&nbsp&nbsp</a></li>
-                                        <li><a href=""><i class="yp-icon-weibo"></i> Find us on Weibo&nbsp&nbsp</a></li>
+                                <div class="footer-center" id="footer-center">
+                                    <ul>
+                                        <li><p><a href="https://www.facebook.com/pages/YoPoint-%E6%82%A0%E7%82%B9/134777376546022"><i class="yp-icon-facebook"></i> Find us on Facebook&nbsp&nbsp</a></p></li>
+                                        <li><p><a href="https://plus.google.com/118247963514120148054/posts?hl=en-GB&partnerid=gplp0"><i class="yp-icon-google"></i> Plus Yopoint&nbsp&nbsp</a></p></li>
+                                        <li><p><a href="https://twitter.com/YoPoint13"><i class="yp-icon-twitter"></i> Find us on Twitter&nbsp&nbsp</a></p></li>
+                                        <li><p><a href=""><i class="yp-icon-weibo"></i> Find us on Weibo&nbsp&nbsp</a></p></li>
                                     </ul>
                                 </div>
-                                <div class="col-lg-4">
-                                    <ul class="foot_link" style="text-align: center;">'."<?php
-                                        echo CHtml::link('Advertise with Yopint&nbsp&nbsp',array('site/advertise'), array('target'=>'_blank'));<br />
-                                        echo CHtml::link('Ticket Sales and Partnerships&nbsp&nbsp',array('site/terms'), array('target'=>'_blank')); ?><br />
-                                        echo CHtml::link('Careers at Yopoint&nbsp&nbsp',array('site/terms'), array('target'=>'_blank')); ?><br />
-                                        echo CHtml::link('Terms and conditions&nbsp&nbsp',array('site/terms'), array('target'=>'_blank')); ?><br />
-                                        echo CHtml::link('Privacy policy&nbsp&nbsp',array('site/terms'), array('target'=>'_blank')); ?><br />
-                                        echo CHtml::link('Cookie notice&nbsp&nbsp',array('site/terms'), array('target'=>'_blank')); ?><br />
+                                <div class="footer-right" id="footer-right">
+                                    <ul>
+                                        <p>'.CHtml::link('Advertise with Yopint&nbsp&nbsp',array('site/advertise'), array('target'=>'_blank')).'</p>
+                                        <p>'.CHtml::link('Ticket Sales and Partnerships&nbsp&nbsp',array('site/terms'), array('target'=>'_blank')).'</p>
+                                        <p>'.CHtml::link('Careers at Yopoint&nbsp&nbsp',array('site/terms'), array('target'=>'_blank')).'</p>
+                                        <p>'.CHtml::link('Terms and conditions&nbsp&nbsp',array('site/terms'), array('target'=>'_blank')).'</p>
+                                        <p>'.CHtml::link('Privacy policy&nbsp&nbsp',array('site/terms'), array('target'=>'_blank')).'</p>
+                                        <p>'.CHtml::link('Cookie notice&nbsp&nbsp',array('site/terms'), array('target'=>'_blank')).'</p>
                                     </ul>
                                 </div>
-                      </div>Copyright &copy; echo date('Y'); ?> YoPoint LTD.<br/>
-                               All Rights Reserved.<br/> ?>";
+                      <div class="footer-copyright" id="footer-copyright">Copyright &copy; '.date('Y').' YoPoint LTD. All Rights Reserved.</div><br />';
         echo $footer_html;
     }
     /*###################################################################################*/
